@@ -155,6 +155,7 @@
             Controls.Add(logInTextBox);
             Name = "SignUp";
             Text = "SignUp";
+            Load += SignUp_Load;
             topPanel.ResumeLayout(false);
             topPanel.PerformLayout();
             ResumeLayout(false);

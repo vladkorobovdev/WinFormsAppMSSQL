@@ -102,6 +102,7 @@
             logInBtn.TabIndex = 3;
             logInBtn.Text = "Log in";
             logInBtn.UseVisualStyleBackColor = false;
+            logInBtn.Click += logInBtn_Click;
             // 
             // logInTextLabel
             // 

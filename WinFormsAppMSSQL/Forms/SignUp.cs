@@ -15,6 +15,12 @@ namespace WinFormsAppMSSQL.Forms
         public SignUp()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
+        }
+
+        private void SignUp_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
