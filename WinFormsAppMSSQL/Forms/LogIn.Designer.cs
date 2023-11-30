@@ -37,7 +37,7 @@
             logInTextLabel = new Label();
             passwordTextLabel = new Label();
             noAccLink = new LinkLabel();
-            shiwBtn = new Button();
+            showBtn = new Button();
             hideBtn = new Button();
             topPanel.SuspendLayout();
             SuspendLayout();
@@ -61,6 +61,7 @@
             clearBtn.TabIndex = 1;
             clearBtn.Text = "Clear";
             clearBtn.UseVisualStyleBackColor = true;
+            clearBtn.Click += clearBtn_Click;
             // 
             // logInLabel
             // 
@@ -76,20 +77,18 @@
             // 
             logInTextBox.BorderStyle = BorderStyle.FixedSingle;
             logInTextBox.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            logInTextBox.Location = new Point(308, 174);
-            logInTextBox.Multiline = true;
+            logInTextBox.Location = new Point(308, 180);
             logInTextBox.Name = "logInTextBox";
-            logInTextBox.Size = new Size(186, 48);
+            logInTextBox.Size = new Size(186, 39);
             logInTextBox.TabIndex = 1;
             // 
             // passwordTextBox
             // 
             passwordTextBox.BorderStyle = BorderStyle.FixedSingle;
             passwordTextBox.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            passwordTextBox.Location = new Point(308, 244);
-            passwordTextBox.Multiline = true;
+            passwordTextBox.Location = new Point(308, 248);
             passwordTextBox.Name = "passwordTextBox";
-            passwordTextBox.Size = new Size(186, 48);
+            passwordTextBox.Size = new Size(186, 39);
             passwordTextBox.TabIndex = 2;
             // 
             // logInBtn
@@ -133,15 +132,17 @@
             noAccLink.TabIndex = 6;
             noAccLink.TabStop = true;
             noAccLink.Text = "Don't have an account yet?";
+            noAccLink.LinkClicked += noAccLink_LinkClicked;
             // 
-            // shiwBtn
+            // showBtn
             // 
-            shiwBtn.Location = new Point(500, 255);
-            shiwBtn.Name = "shiwBtn";
-            shiwBtn.Size = new Size(53, 29);
-            shiwBtn.TabIndex = 7;
-            shiwBtn.Text = "Show";
-            shiwBtn.UseVisualStyleBackColor = true;
+            showBtn.Location = new Point(500, 255);
+            showBtn.Name = "showBtn";
+            showBtn.Size = new Size(53, 29);
+            showBtn.TabIndex = 7;
+            showBtn.Text = "Show";
+            showBtn.UseVisualStyleBackColor = true;
+            showBtn.Click += showBtn_Click;
             // 
             // hideBtn
             // 
@@ -151,6 +152,7 @@
             hideBtn.TabIndex = 8;
             hideBtn.Text = "Hide";
             hideBtn.UseVisualStyleBackColor = true;
+            hideBtn.Click += hideBtn_Click;
             // 
             // LogIn
             // 
@@ -158,7 +160,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(hideBtn);
-            Controls.Add(shiwBtn);
+            Controls.Add(showBtn);
             Controls.Add(noAccLink);
             Controls.Add(passwordTextLabel);
             Controls.Add(logInTextLabel);
@@ -186,7 +188,7 @@
         private Label logInTextLabel;
         private Label passwordTextLabel;
         private LinkLabel noAccLink;
-        private Button shiwBtn;
+        private Button showBtn;
         private Button hideBtn;
     }
 }

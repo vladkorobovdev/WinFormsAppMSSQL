@@ -50,11 +50,40 @@ namespace WinFormsAppMSSQL.Forms
                 var mainForm = new Form1();
                 this.Hide();
                 mainForm.ShowDialog();
-            } 
+                this.Show();
+            }
             else
             {
                 MessageBox.Show("There's no account with entered data.", "No account", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void noAccLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+
+            var signUpWin = new SignUp();
+            signUpWin.ShowDialog();
+        }
+
+        private void clearBtn_Click(object sender, EventArgs e)
+        {
+            logInTextBox.Text = string.Empty;
+            passwordTextBox.Text = string.Empty;
+        }
+
+        private void showBtn_Click(object sender, EventArgs e)
+        {
+            passwordTextBox.PasswordChar = '\0';
+            showBtn.Visible = false;
+            hideBtn.Visible = true;
+        }
+
+        private void hideBtn_Click(object sender, EventArgs e)
+        {
+            passwordTextBox.PasswordChar = '*';
+            hideBtn.Visible = false;
+            showBtn.Visible = true;
         }
     }
 }
