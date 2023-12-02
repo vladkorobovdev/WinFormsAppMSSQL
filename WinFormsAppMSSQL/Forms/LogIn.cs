@@ -47,10 +47,9 @@ namespace WinFormsAppMSSQL.Forms
             if (table.Rows.Count == 1)
             {
                 MessageBox.Show("You have successfully logged in!", "Logged in", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                var mainForm = new Form1();
+                var mainForm = new MainWin();
                 this.Hide();
                 mainForm.ShowDialog();
-                this.Show();
             }
             else
             {
